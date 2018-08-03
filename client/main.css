@@ -5,8 +5,9 @@
   height: 600px;
 }
 .blackboard {
-  width: 800px;
-  height: 300px;
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 70px;
   background: #063930;
   border: 10px solid #e18a43;
   box-sizing: border-box;

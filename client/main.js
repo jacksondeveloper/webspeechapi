@@ -51,6 +51,7 @@ Template.board.onRendered(function(){
      } else {
 
        recognition = new webkitSpeechRecognition();
+       recognition.lang = 'pt-BR';
        recognition.continuous = true;
        recognition.interimResults = true;
        Session.set('final_span','')
@@ -69,7 +70,7 @@ Template.board.onRendered(function(){
               }
             }
             // Atualiza valor falado no banco
-            Paragraph.update(initialId, {text: final_transcript});
+            Paragraph.update(initialId, {text: final_transcript});            
        }
 
        recognition.onerror = function(event) {
